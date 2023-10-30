@@ -5,7 +5,7 @@ const TestERC = artifacts.require('TestToken');
 
 const ZERO_ADDRESS = "0x0000000000000000000000000000000000000000";
 
-contract("FeralfileEnglishAuction", async (accounts) => {
+contract("TokenDistribution", async (accounts) => {
     before(async function () {
         mintAmount = 100000;
         this.testERC20 = await TestERC.new(mintAmount);
