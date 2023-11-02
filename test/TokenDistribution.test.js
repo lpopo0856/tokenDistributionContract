@@ -15,6 +15,7 @@ contract("TokenDistribution", async (accounts) => {
 
     it("test renounceOwnership disabled", async function () {
         TDC = await TokenDistribution.new();
+        await TDC.renounceOwnership();
         assert.equal(accounts[0], await TDC.owner());
     });
 
