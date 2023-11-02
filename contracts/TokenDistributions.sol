@@ -97,6 +97,11 @@ contract TokenDistribution is Ownable {
                 _destinationShare[i] != 0,
                 "TokenDistribution: destinationShare is set to zero"
             );
+            require(
+                _tokenDistributionShareMap[_token][_destinationAddresses[i]] ==
+                    0,
+                "TokenDistribution: destinationShare already set"
+            );
             totalShare += _destinationShare[i];
             _tokenDistributionShareMap[_token][
                 _destinationAddresses[i]
